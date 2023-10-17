@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <link rel="stylesheet" href="style.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto cantelle</title>
+    <script href="calcular.js"></script>
+    
+
+</head>    
+
+                       <body>
+                               <nav id='menu'>
+                                          <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                                          <ul>
+                                            <li><a href='https://'>Home</a></li>
+                                            <li><a class='dropdown-arrow' href='http://'>Simuladores</a>
+                                              <ul class='sub-menus'>
+                                                  <li><a href='https://guimcl.github.io/cantelle/'>Simu Cantelle</a></li>
+                                              </ul>
+                                                <li><a href='https://guimcl.github.io/inicar-whats/'>Iniciar Whats</a></li>
+                                        </nav>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <div class="container">
+                            <div id="conteudo">
+                                <p id="font">Simulador | CANTELLE</p>
+                                <br>
+                                <div>
+                                    <label for="valornota"> Digite o valor da Nota: </label> <br>
+                                    <input type="text" id="valornota" name="valornota" required>
+                                </div>
+<br>
+                                <div>
+                                    <label for="peso1    "> Digite o peso: </label> <br>
+                                    <input type="text" id="peso1" name="peso1" required>
+                                </div>
+<br>
+<br>
+
+                                <div>
+                                    <p>VALOR TOTAL DO FRETE: </p>
+                                    <input type="text" id="pagar" name="pagar" disabled>
+                                    <input id="botao1" type="button" value="Calcular" onclick="calcular()" onmouseover="botao(this)" onmouseout="botao(this)">
+                                 </div>
+            </div>
+        </div>
+    
+                    <script>
+
+                        jQuery(document).ready(function($) {
+                            $
+                            ('.money').mask('000.000.000.000.000,00',{reverse:true});});
+                            
+                        
+
+                    function calcular(){
+                    var valornota             = document.getElementById("valornota").value;
+                    var resultado         = document.getElementById("pagar");
+                    var creditoParcelado  = document.getElementById("parcelado");
+                    var peso             = document.getElementById("peso1").value;
+                    var mkmga              = 0
+                    var grissgo            = 0;
+                    var desconto            = 0;
+                    var total              =0;
+                    var fretogo                    = 0;
+                    
+                    if(valornota>10)
+                    if(peso>0.1)
+                  
+                    {
+                            
+                            valornota = valornota*0.5/100;
+                            grissgo = peso*1;
+                            if(grissgo<100){
+                                grissgo = 100
+                            }
+                            peso2 = valornota + grissgo;
+                            fretogo = peso2*30/100;
+                            totalfrete = fretogo + peso2
+                             
+                         
+                            total = totalfrete
+
+                        
+
+                    }
+                
+
+                resultado.value = "Pagar:"+total;
+                }
+
+                    </script>
+</body>
+</html>
